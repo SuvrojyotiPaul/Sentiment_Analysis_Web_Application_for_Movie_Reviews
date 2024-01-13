@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Data Page</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/result.html">Result</a></li>
+            <li><a href="/data.html">Data</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Data Page</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Movie Review</th>
+                <th>Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <audio autoplay controls style="position: absolute; bottom: 35px; left: 50%; transform: translateX(-50%); opacity: 0.4;">
+        <source src="static\audio\weird fishes.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+</body>
+</html>

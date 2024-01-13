@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Movie Review Classifier</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/result.html">Result</a></li>
+            <li><a href="/data.html">Data</a></li>
+        </ul>
+    </nav>
+    <h1>Movie Review Classifier</h1>
+    <p>Submit a movie review and we'll predict if it's positive or negative!</p>
+    <form method="POST" action="/result.html">
+        <label for="fname">Enter your review:</label><br>
+        <textarea id="fname" name="fname" rows="10" cols="50"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <audio autoplay controls style="position: absolute; bottom: 35px; left: 50%; transform: translateX(-50%); opacity: 0.4;">
+      <source src="static\audio\weird fishes.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
